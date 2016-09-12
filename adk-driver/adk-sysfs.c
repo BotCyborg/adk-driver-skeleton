@@ -24,13 +24,13 @@
 #include "adk-sysfs.h"
 
 struct kobj_attribute version_attribute =
-        __ATTR(version, 0666, version_show,NULL);
+        __ATTR(version, 0660, version_show,NULL);
 struct kobj_attribute identity_attribute =
-        __ATTR(identity, 0666, NULL, identity_store);
+        __ATTR(identity, 0660, NULL, identity_store);
 struct kobj_attribute mode_attribute =
-        __ATTR(start, 0666, NULL, mode_store);
+        __ATTR(start, 0660, NULL, mode_store);
 struct kobj_attribute bulk_attribute =
-        __ATTR(bulk, 0666, NULL, NULL);
+        __ATTR(bulk, 0660, NULL, NULL);
 
 struct attribute *adk_default_attrs[] = {
         &version_attribute.attr,
